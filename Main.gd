@@ -51,7 +51,7 @@ func load_config():
 	var config = ConfigFile.new()
 	
 	if !FileAccess.file_exists(Config_Path):
-		config.set_value("Random Chooser", "Extensions", ["mp4", "mp3", "mkv"])
+		config.set_value("Random Chooser", "extensions", ["mp4", "mp3", "mkv"])
 		config.set_value("Random Chooser", "open_file_folder", true)
 		config.set_value("Random Chooser", "open_config", false)
 		config.save(Config_Path)
@@ -62,7 +62,7 @@ func load_config():
 		printerr(err)
 	
 	for section in config.get_sections(): for key in config.get_section_keys(section):
-		if key == "Extensions":
+		if key == "extensions":
 			Extensions = config.get_value(section, key)
 		if key == "open_file_folder":
 			open_file_folder = config.get_value(section, key)
