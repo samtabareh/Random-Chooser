@@ -1,0 +1,12 @@
+res://export_presets.cfg::1710343052::99adf2109db4a573b2ceeca933897c7a::
+res://icon.svg::1710325905::43b305bd3d55f8faec5e5175cbe35533::CompressedTexture2D
+res://Main.gd::1710342797::a06a5bf83b8d142c1e30e17b137c0989::GDScript
+res://Main.tscn::1710342797::ea0b17d39812e3c411dd59402e28a717::PackedScene,Theme,CanvasLayer,ColorRect,Button,NativeFileDialog,NativeConfirmationDialog
+res://addons/native_dialogs/LICENSE.md::1710331095::b070786b35e72da0737d1a1405f16dad::
+res://addons/native_dialogs/native_dialogs.gdextension::1710331095::b456df2a8f2fc50ba8d6eb8cfc6407ed::GDExtension
+res://addons/native_dialogs/plugin.cfg::1710340370::1bca2ef5da297ed0f9c7019c66a0ac57::
+res://addons/native_dialogs/plugin.gd::1710331095::72d022c0aaa55e0913399599704efade::GDScript
+res://addons/native_dialogs/icons/native_accept_dialog.svg::1710331095::391d1ad4fc41566514811c11117a10d7::CompressedTexture2D
+res://addons/native_dialogs/icons/native_confirmation_dialog.svg::1710331095::4e1d92c91ff8dcf991b6121bd79ba622::CompressedTexture2D
+res://addons/native_dialogs/icons/native_file_dialog.svg::1710331095::e5a58f2c5f081367de5304ab0c9ba4e4::CompressedTexture2D
+res://addons/native_dialogs/icons/native_notification.svg::1710331095::caba03c7e9c840e6b944a17c926bfa25::CompressedTexture2D
