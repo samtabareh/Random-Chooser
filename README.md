@@ -1,7 +1,7 @@
 ## Instructions
 1. Download the latest [release](https://github.com/samtabareh/Random-Chooser/releases)
 2. Unzip it (optional)
-3. Run the exe (I recommend console version)
+3. Run the exe
 
 ## Config File
 | Property | Value | Description |
