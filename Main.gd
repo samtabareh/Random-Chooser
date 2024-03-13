@@ -73,7 +73,7 @@ func load_config():
 	print_rich("[color=yellow]Loaded config file[/color]")
 
 func _on_select_pressed():
-	print("[color=yellow]Selecting folder...[/color]")
+	print_rich("[color=yellow]Selecting folder...[/color]")
 	$Select/NativeFileDialog.show()
 
 func _on_config_pressed():
