@@ -16,7 +16,7 @@
 | `open_config` | bool | If false the folder of the config will open instead of the file |
 
 ### Extensions Values
-`extensions` can allow all extentions by adding the "any" string to it. And it can have extensions that'll be filtered out and wont be included by adding "! + the filtered extension". Check examples for more clarity.
+`extensions` can allow all extensions by adding the "any" string to it. And it can have extensions that'll be filtered out and wont be included by adding "! + the filtered extension". Check examples for more clarity.
 
 ## Examples
 
