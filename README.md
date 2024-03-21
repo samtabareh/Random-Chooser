@@ -9,13 +9,13 @@
 3. Click on "Open A Random File" for a random file to be opened.
 
 # Config File
-| Property | Value | Description |
+| Property | Value Type | Description |
 | :------- | :---: | :---------- |
 | `extensions` | Array[String] | Array of all allowed and filtered extensions for files to be included or filtered out |
 | `open_file_folder` | bool | If true the folder of the chosen file will open |
 | `open_config` | bool | If false the folder of the config will open instead of the file |
 
-### Extensions Values
+### `extensions` Values
 `extensions` can allow all extensions by adding the "any" string to it. And it can have extensions that'll be filtered out and wont be included by adding "! + the filtered extension". Check examples for more clarity.
 
 ## Examples
