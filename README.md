@@ -9,8 +9,8 @@
 3. Click on "Open A Random File" for a random file to be opened.
 
 # Config File
-| Property | Value Type | Default Value | | Description |
-| :------- | :--------: | :-----------: | :------------ |
+| Property | Value Type | Default Value | Description |
+| :------- | :--------: | :-----------: | :---------- |
 | `extensions` | Array[String] | ["mp4", "mkv", "!mp3"] | Array of all allowed and filtered extensions for files to be included or filtered out |
 | `load_inside_folders` | bool | `true` | If true the app will load the folders inside of the selected folder |
 | `open_file_folder` | bool | `false` | If true the folder of the chosen file will open |
