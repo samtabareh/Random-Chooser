@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://bifv3ax748aje"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_8a4f8"]
+
+[sub_resource type="Theme" id="Theme_qpawv"]
+Button/colors/font_color = Color(0.145098, 0.913725, 0.521569, 1)
+Button/font_sizes/font_size = 24
+
+[sub_resource type="Theme" id="Theme_cnoa6"]
+Button/colors/font_color = Color(0.788235, 0.537255, 1, 1)
+Button/font_sizes/font_size = 20
+
+[sub_resource type="Theme" id="Theme_i38d7"]
+Button/colors/font_color = Color(0, 0.870588, 0.952941, 1)
+Button/font_sizes/font_size = 24
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8a4f8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.356863, 0.356863, 0.356863, 0.756863)
+
+[node name="Files" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(50, 20)
+layout_direction = 2
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[color=yellow]Files Loaded: [/color][color=green]0"
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Select" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_qpawv")
+text = "Select a folder"
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="VBoxContainer/Select"]
+title = "Open a Directory"
+file_mode = 2
+access = 2
+
+[node name="Open" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_cnoa6")
+text = "Open A Random File"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_i38d7")
+text = "Settings"
+
+[connection signal="pressed" from="VBoxContainer/Select" to="." method="_on_select_pressed"]
+[connection signal="dir_selected" from="VBoxContainer/Select/NativeFileDialog" to="." method="_on_dir_selected"]
+[connection signal="pressed" from="VBoxContainer/Open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]

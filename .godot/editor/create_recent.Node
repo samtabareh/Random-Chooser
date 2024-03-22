@@ -1,8 +1,12 @@
-VBoxContainer
-NativeConfirmationDialog
+SubViewport
+TextureProgressBar
+ProgressBar
+RichTextLabel
 Label
+VBoxContainer
+Button
+CanvasLayer
+NativeConfirmationDialog
 NativeFileDialog
 FileDialog
-Button
 ColorRect
-CanvasLayer

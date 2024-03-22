@@ -11,11 +11,16 @@ config_version=5
 [application]
 
 config/name="Random Chooser"
-config/version="1.4.1"
-run/main_scene="res://Main.tscn"
+config/version="1.4.2"
+run/main_scene="res://Scenes/Menu.tscn"
 config/use_custom_user_dir=true
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
+
+[autoload]
+
+Main="*res://Scripts/Main.gd"
 
 [display]
 
@@ -27,7 +32,22 @@ window/size/resizable=false
 
 enabled=PackedStringArray("res://addons/native_dialogs/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Scenes/": "purple",
+"res://Scripts/": "blue",
+"res://addons/": "red"
+}
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=5
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality.mobile=5
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=5
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality.mobile=5
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/default_filters/anisotropic_filtering_level=4
