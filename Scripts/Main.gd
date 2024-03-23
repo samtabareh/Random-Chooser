@@ -1,6 +1,7 @@
 extends Node
 
-### GLOBAL VARS
+### VARIABLES
+
 var Config_Path = "user://config.ini"
 var Global_Config_Path = ProjectSettings.globalize_path(Config_Path)
 var Selected_Path: String
@@ -20,6 +21,8 @@ const CV = 3
 ## Filter Key
 const FKEY = "!"
 
+### FUNCTIONS
+
 func _ready():
 	load_config()
 
@@ -30,7 +33,8 @@ func load_dir(path: String):
 	print_rich("[color=yellow]Selected folder: [/color][color=green]%s[/color]" %path)
 	
 	var dir = DirAccess.open(path)
-	dir =  await open_dir(dir)
+	dir = open_dir(dir)
+	
 	print_rich("[color=yellow]Files: [/color][color=orange]%s[/color]"% Files.size())
 
 func open_dir(dir : DirAccess):
@@ -46,10 +50,12 @@ func open_dir(dir : DirAccess):
 		if dir.current_is_dir() && load_inside_folders:
 			print_rich("[color=cyan]%s[/color]" % file_name)
 			open_dir(DirAccess.open(path+"/"+file_name))
-		elif !dir.current_is_dir():
-			if Extensions.has(FKEY+file_name.get_extension()): return
+		
+		if !dir.current_is_dir():
+			if Extensions.has(FKEY+file_name.get_extension()): pass
 			elif Extensions.has(file_name.get_extension()) || Extensions.has("any"):
 				Files.append(path+"/"+file_name)
+		
 		file_name = dir.get_next()
 
 ### CONFIG

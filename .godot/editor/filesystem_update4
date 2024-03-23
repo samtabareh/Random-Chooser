@@ -1,5 +1,3 @@
 res://Scenes/Menu.tscn
-res://Scripts/Menu.gd
-res://Scenes/Config.tscn
-res://Scripts/Config.gd
 res://Scripts/Main.gd
+res://Scripts/Menu.gd

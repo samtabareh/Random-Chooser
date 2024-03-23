@@ -2,7 +2,7 @@ extends CanvasLayer
 
 func _process(_delta):
 	$VBoxContainer/Open.disabled = Main.Files.size() == 0
-	$Files.text = "[color=yellow]Files Loaded: [/color][color=green]%s"% Main.Files.size()
+	$Files.text = "[color=yellow]Files Loaded: [color=green]%s"%Main.Files.size()
 
 func _on_select_pressed():
 	$VBoxContainer/Select.release_focus()

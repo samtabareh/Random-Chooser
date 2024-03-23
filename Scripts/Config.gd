@@ -11,7 +11,7 @@ func _on_config_pressed():
 	$VBoxContainer/Config.release_focus()
 	if !Main.open_config:
 		print_rich("[color=yellow]Opened config folder[/color]")
-		OS.shell_show_in_file_manager(Main.Global_Config_Path)
+		OS.shell_open(ProjectSettings.globalize_path("user://"))
 	else:
 		print_rich("[color=yellow]Opened config file[/color]")
 		OS.shell_open(Main.Global_Config_Path)
